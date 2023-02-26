@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>kütüphane projesi</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        
+    </head>
+    <body id="page-top">
+     <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top  " id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <button class="btnben"onclick="myFunction()">dark mode</button>
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loinModal">Giriş yap</button>
+                <div class="modal " role="dialog" id="loinModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title">giriş sayfası</h6>
+                                 <button type="button" class="close" data-bs-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="todo-form">
+                                    <div class="form-group">
+                                        <input type="text" name="kullanıcı adı" class="form-control" placeholder="kullanıcı adı">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="" class="form-control" placeholder="isminiz">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="sifre" class="form-control" placeholder="isminiz">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-sucess">sign in</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-sucess">kapat butonu</button>
+                                <button type="submit" class="btn btn-sucess">sign in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+              
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link"  href="#services">Hizmetler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Popüler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Türler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Takım</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                        <li class="nav-item"><a class="btn btn-primary btn-xsm " onclick="fonk()">rengini değiştir</a>
+                        <li class="nav-item"><button type="button" onclick="document.getElementById('esra').style.fontSize='50px'"></button></li>  
+                    </ul>  
+                </div>
+            </div>
+        </nav>
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <h1 id="ani"></h1>
+                <div  class="masthead-subheading"id="esra">Kütüphanemiz hoşgeldiniz!</div>
+                <div class="masthead-heading text-uppercase"id="yeni">hadi okuyalım!</div>
+                <li>
+                    <ul><a class="btn btn-primary btn-lg " onclick='fonkk()'>başlamak için tıklayınız</a></ul>
+                    <ul> <a class="btn btn-primary btn-xl text-uppercase" href="#services">Daha fazla</a></ul>
+               </li>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Hizmetler</h2>
+                    <h3 class="section-subheading text-muted">kütüphanemizin sunduğu hizmetler .</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">E-ticaret</h4>
+                        <p class="text-muted">online alışverişin keyfini çıkarın</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">stok kontrolü</h4>
+                        <p class="text-muted">kitap stoklarını rahatlıkla kontrol edebilirsiniz</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">güvenli alışveriş</h4>
+                        <p class="text-muted">güvenli alışveriş imkanı</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#modal_ornegi">modal aç</button>
+                    <div class="modal" id="modal_ornegi">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h10 class="modal-title text-dark">modal başlık</h10>
+                                    <button type="button" class="close" data-bs-dismiss="modal">
+                                        <span>&times;</span>
+                                     </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-dark">değişiklikler kaydedilsin mi</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">kapat</button>
+                                    <button type="button" class="btn btn-primary">kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Popüler</h2>
+                    <h3 class="section-subheading text-muted">son dönemlerin popüler kitaplarına göz atalım</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Tehliikeli Oyunlar</div>
+                                <div class="portfolio-caption-subheading text-muted">Oğuz Atay</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Nazan Bekiroğlu</div>
+                                <div class="portfolio-caption-subheading text-muted">Nar Ağacı</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Şeker Portakalı</div>
+                                <div class="portfolio-caption-subheading text-muted">Jose Maure de Vasconcelos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">İçimizdeki Şeytan</div>
+                                <div class="portfolio-caption-subheading text-muted">Sabahattin Ali</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Bin muhteşem Güneş</div>
+                                <div class="portfolio-caption-subheading text-muted">Khaled hosseini</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Ateşten Gömlek</div>
+                                <div class="portfolio-caption-subheading text-muted">Halide Edib Adıvar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Türler</h2>
+                    <h3 class="section-subheading text-muted">En çok tercih edilen kitap türleri :)</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                              
+                                
+                                <h4 class="subheading">Çizgi Romanlar</h4>
+                            </div>
+                            
+                            <div class="timeline-body"><p class="text-muted">Çizgi roman veya resimli roman, çizgi ile hikâye anlatmak için birbirini takip eden panellerin kullanıldığı bir sanat türü.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                
+                                <h4 class="subheading">Felsefe kitapları</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Felsefe; varlık, bilgi, gerçek, adalet, güzellik, doğruluk, akıl ve dil gibi konularla ilgili özsel sorunlara ilişkin yapılan çalışmalardır. Felsefe düşünce sanatı olarak da bilinir.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                
+                                <h4 class="subheading">Bilim kitapları</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Bilim kitabı, bilim ile ilgili kitap türleridir. Bilim kitapları, eğitim kurumlarının taleplerine göre üretilmektedir. Bilim kitapları, üniversite ve okullarda kullanılan ders kitapları ve diğer tür kitaplardır. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Hikaye kitapları</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Olmuş ya da olması mümkün olayları anlatan; olay, kişi,yer, zaman örgüsünde şekil alan kısa yazıları içeren eserlere hikaye kitabı denir. Hikaye kitabında kahramanlar daha çok tek yönlü olarak ele alınırlar. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                sizin 
+                                <br />
+                                tercihiniz
+                                <br />
+                                hangisi?
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </section>
+
+        
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 id="eda"class="section-heading text-uppercase text-dark">Takım arkadaşlarımız :)</h2>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                            <h4 class="text-dark">Esra Korkmaz</h4>
+                            <p class="text-muted">Bilgisyar Mühendisi</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                            <h4 class="text-dark">Eda Korkmaz</h4>
+                            <p class="text-muted">Bilgisyar Mühendisi</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                            <h4 class="text-dark">Hacer Aydemir</h4>
+                            <p class="text-muted">Bilgisyar Mühendisi</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#lginModal">modal aç</button>
+                    <div class="modal" id="lginModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h10 class="modal-title text-dark">giriş</h10>
+                                    <button type="button" class="close" data-bs-dismiss="modal">
+                                        <span>&times;</span>
+                                     </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                         <input type="text" name="kullanıcı adı" class="form-control kullanıcı"id="İSİM" placeholder="isim"> 
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="" class="form-control kullanıcı" id="SOYAD"placeholder="soyad">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="sifre" class="form-control kullanıcı"id="SİFRE" placeholder="sifre">
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">kapat</button>
+                                    <button type="submit" class="btn btn-primary" id="AA">kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Giriş yap</button>
+                    <div class="modal " role="dialog" id="loginModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title text-dark">giriş sayfası</h6>
+                                    <button type="button" class="close" data-bs-dismiss="modal">
+                                    
+                                        <span>&times;</span>
+                                    </button>   
+                                </div>
+                                <div class="modal-body">
+                                    <div id="formDiv">
+                                        <form id="carForm">
+                                            <h25 class="text-dark">kayıt oluşturmak için bilgilerinizi giriniz</h25>
+                                           <div class="form-group"> 
+                                                <label for="carBrand" class="text-dark" >isim :</label>
+                                                <input type="text"class="form-control" id="carBrand" placeholder="isim" required autofocus><br>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="carPrice" class="text-dark">soyad :</label>
+                                                <input type="text"class="form-control" id="carPrice" placeholder="soyad" required><br>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="key"class="text-dark" >Key :</label>
+                                                <input type="text" id="key"class="form-control" placeholder="Key" required><br>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" >kaydet</button>
+                                        </form>
+                                        <br>
+                                            <label for="retrieveKey" class="text-dark">ekranda göstermek için key giriniz</label>
+                                            <input type="text" class="form-control"id="retrieveKey"  required><br>
+                                        <button id="retrieveButton"class="btn btn-primary" >kaydı göster</button>
+                                        <br>
+                                        <div id="retrieve" class="text-dark"></div>
+                                        <br>
+                                        <label for="removeKey"class="text-dark" >silmek istediğiniz itemin keyini giriniz</label>
+                                        <input type="text"class="form-control" id="removeKey"  required><br>
+                                        <button id="removeButton"class="btn btn-primary" >kaydı sil</button>
+                                        <br>
+                                        <button id="clearButton"class="btn btn-primary btn-group-sm" >bütün kaydı sil</button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <!-- Clients-->
+        <div class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">İletişim</h2>
+                    <h3 class="section-subheading text-muted">Bizimle iletişime geçebilirsiniz</h3>
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="isminiz" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">İsim gereklidir.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Mail adresiniz" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Email gereklidir</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email geçerli değil.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="telefon numaranız" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Telefon numarası gereklidir</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Mesajınız" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Mesaj gereklidir</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Mesaj başarıyla gönderildi!</div>
+                            
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Mesaj gönderirken hata oluştu!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">GÖNDER</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Esra Korkmaz 2022</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Gizlilik politikası</a>
+                        <a class="link-dark text-decoration-none" href="#!">Kullanım koşulları </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Tehlikeli Oyunlar</h2>
+                                   
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                    <p>Sevgili Bilge,
+                                        Bana bir mektup yazmış olsaydın, ben de sana cevap vermiş olsaydım. Ya da son buluşmamızda büyük bir fırtına kopmuş olsaydı aramızda ve birçok söz yarım kalsaydı, birçok mesele çözüme bağlanmadan büyük bir öfke ve şiddet içinde ayrılmış olsaydık da yazmak, anlatmak, birbirini seven iki insan olarak konuşmak kaçınılmaz olsaydı. Sana, durup dururken yazmak zorunda kalmasaydım...</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>yazar:</strong>
+                                            Oğuz Atay
+                                        </li>
+                                        <li>
+                                            <strong>kitabın adı:</strong>
+                                            Tehliikeli Oyunlar
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        kapat
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Nar ağacı</h2>
+                                    
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                    <p>"Bazen en büyük hakikatlerin bilgisinin en büyük günahlarla yan yana durduğunu unutma Setterhan. Aşkın nizami parcalaninca her şey göze abes görünmeye başlar. İnsan içinden yenilenmeyince dışından eskir...'</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>yazar:</strong>
+                                            Nazan Bekiroğlu
+                                        </li>
+                                        <li>
+                                            <strong>kitabın adı:</strong>
+                                            nar ağacı
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        kapat
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Şeker Portakalı</h2>
+                                    
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                    <p>N'oldu ,Zeze?"
+                                        "Hiç.Şarkı söylüyordum."
+                                        "Şarkı mı?"
+                                        "Evet."
+                                        "Demek ki kulaklarım sağır olmuş."
+                                        Acaba insanın içinden de şarkı söyleyebildiğini bilmiyor olabilir miydi?</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>yazar:</strong>
+                                            jose Maure De Vasconcelos
+                                        </li>
+                                        <li>
+                                            <strong>kitabın adı:</strong>
+                                            Şeker Portakalı
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        kapat
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">İçimizdeki Şeytan</h2>
+                                    
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <p>Zannediyorum ki, tasavvuru bile baş döndüren bir süratle hiç durmadan koşup giden bu hayat ve bir avuç toprağının bile doğru dürüst esrarına varamadığımız bu karmakarışık dünya beni bir buğday tanesi, bir karınca gibi ezip geçiverecek...</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>yazar:</strong>
+                                            Sabahattin Ali
+                                        </li>
+                                        <li>
+                                            <strong>Kitabın Adı:</strong>
+                                            İçimizdeki Şeytan
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        kapat
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Bin Muhteşem Güneş</h2>
+                                    
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <p>“Bunu öğren, kafana iyice sok, kızım,” dedi Nana.
+                                        “Pusulanın hep kuzeyi gösteren ibresi gibi, bir erkeğin suçlayan parmağı da daima, mutlaka bir kadını gösterir. Her zaman. Bunu hiç unutma, Meryem.”</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>yazar:</strong>
+                                            Khaled Hosseini
+                                        </li>
+                                        <li>
+                                            <strong>Kitabın adı:</strong>
+                                            Bin Muhteşem Güneş
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        kapat
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Ateşten Gömlek</h2>
+                                    
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <p>" Affı zalimler değil, mazlumlar verir. Çanakkale'de dövüşürken ne asi ne esirdik. Namuslu bir millet gibi dövüştük, öldük, öldürdük. Ne zamandan beri ve hangi milletle harp edilir de mağlup olduğu zaman ona katil denilir? "</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>yazar:</strong>
+                                           Halide Edib Adıvar
+                                        </li>
+                                        <li>
+                                            <strong>kitabın adı:</strong>
+                                            Ateşten Gömlek
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        kapat
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            
+            function fonk(){
+            var element=document.getElementById('esra');
+            element.classList.toggle("renkk");
+            alert("rengini değiştiriyoruz");
+            
+            }
+            function f(){
+                
+                if( document.getElementById('esra').style.fontsize=='50px '){ 
+                    document.getElementById('esra').style.fontsize='5px';
+                }
+                else{
+                    document.getElementById('esra').style.fontsize='50px';
+                }
+                //var element=document.getElementById('esra');
+                //element.classList.toggle("font");
+            }
+            const myTimeout = setTimeout(yeni, 5000);
+            function yeni(){
+                document.getElementById("ani").innerHTML = " hadi ilerleyelim!"
+            }
+            function fonkk(){
+                
+                if(document.getElementById("yeni").innerHTML=="başlayalım"){
+                    document.getElementById("yeni").innerHTML="hadi okuyalım";
+                }
+                else{
+                    document.getElementById("yeni").innerHTML="başlayalım";
+
+                }
+            }
+           //$(document)ready(function()){
+
+           //};
+        //    const form=document.querySelector(".todo-form");
+        //    const input=document.querySelector(".form-control");
+        //    const startconf =()=>{
+        //     const todos=localStorage.getItem("todos");
+        //     if(!todos){
+        //         localStorage.setItem("todos",JSON.stringify([]));
+        //     }
+
+        //    }
+        //    const todo=(e)=> {
+        //     e.preventDefault();
+        //     todoText=input.value;
+        //     const todo={
+        //         text =todoText;
+        //     }
+        //     const todos=JSON.parse(localStorage.getItem("todos"));
+        //     todos.push(todo);
+        //     localStorage.setItem("todos",JSON.stringify(todo));
+
+           
+        //    }
+        //    form.addEventListener("submit",addTodo);
+
+
+
+
+
+        // const input=document.querySelector(".form-control");
+        // const submitbtn=document.querySelector("#aa");
+        // submitbtn.addEventListener("click",function(e){
+        //     const inputvalue=input.value;
+        //     e.preventDefault(inputvalue);
+
+
+        // })
+        // const input=document.querySelector("#İSİM");
+        // const sumbitbtnn=document.querySelector("#AA");
+        // sumbitbtnn.addEventListener("click",function(e){
+        //     const inputtvalue=input.value;
+        //     //localStorage.setItem("oturum",inputtvalue);
+            
+        //     let oturumdizisi;
+        //     if(localStorage.getItem("oturum")==null){
+        //         oturumdizisi=[];
+        //     }else{
+        //         oturumdizisi=JSON.parse(localStorage.getItem("oturum"));
+        //     }
+
+        //     oturumdizisi.push(inputtvalue);
+                    
+        //      localStorage.setItem("oturum",JSON.stringify(oturumdizisi));    
+        //     e.preventDefault();
+
+                    
+        // })
+        // var isim=document.getElementById("#İSİM").value;
+        // var soyad=document.getElementById("#SOYAD").value;
+        // var sifre=document.getElementById("#SİFRE").value;
+        // const sumbitbtnn=document.querySelector("#AA");
+        // const oturum={
+        //     isim:isim,
+        //     soyad:soyad,
+        //     sifre:sifre,
+        // }
+        // sumbitbtnn.addEventListener("click",function(e){
+        //     localStorage.setItem("oturum",JSON.stringify(oturum));
+        //     e.preventDefault();
+        // })
+        function store(){ 
+       var isim = document.getElementById('carBrand').value;
+       var soyad = document.getElementById('carPrice').value;
+       var key = document.getElementById('key').value; //gets the key from the user
+   
+       const car = {
+           isim: isim,
+           soyad: soyad,
+           key:key,
+       }
+   
+       window.localStorage.setItem(key,JSON.stringify(car));  
+       //converting object to string
+   } 
+   function retrieveRecords(){ //retrieves items in the localStorage
+       var key = document.getElementById('retrieveKey').value; //gets key from user
+       console.log("retrive records");
+       var records = window.localStorage.getItem(key); //searches for the key in localStorage
+       var paragraph = document.createElement("p");
+       var infor = document.createTextNode(records);
+       paragraph.appendChild(infor);
+       var element = document.getElementById("retrieve");
+       element.appendChild(paragraph);
+   }
+   
+   function removeItem(){ //deletes item from localStorage
+       var key = document.getElementById('removeKey').value; //gets key from user
+       localStorage.removeItem(key) //passes key to the removeItem method
+       console.log("remove items");
+   }
+   
+   function clearStorage(){ 
+       localStorage.clear()
+       console.log("clear records");
+   }
+   
+   window.onload =function(){ 
+       document.getElementById("carForm").onsubmit = store
+       document.getElementById("clearButton").onclick = clearStorage
+       document.getElementById("removeButton").onclick = removeItem
+       document.getElementById("retrieveButton").onclick = retrieveRecords
+   }     
+   
+
+    
+       
+
+        
+  
+        </script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+       
+    </body>
+</html>

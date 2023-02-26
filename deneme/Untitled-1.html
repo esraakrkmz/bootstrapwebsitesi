@@ -1,0 +1,165 @@
+<template>
+  <div>  
+    <div class="page-title d-flex flex-column me-3 mt-3"> 
+        <h1 class="d-flex text-dark fw-bolder my-1 fs-3">Create Holiday <i class="fas fa-exclamation-circle ms-2 fs-7" style="margin-top: 0.30rem" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" title="HOC001" ></i></h1>  
+        <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1"> 
+            <li class="breadcrumb-item text-gray-600">
+                <a href="#" class="text-gray-600 text-hover-primary"><router-link :to="{ name: 'Home' }">Home</router-link></a>
+            </li> 
+            <li class="breadcrumb-item text-gray-600">System Settings</li>  
+            <li class="breadcrumb-item text-gray-600">System Parameters</li>  
+            <li class="breadcrumb-item text-gray-600">Holidays</li>  
+            <li class="breadcrumb-item text-gray-600">Create Holiday</li> 
+        </ul> 
+    </div>  
+    <div class="content flex-row-fluid mt-4" id="kt_content">
+        <div class="card">
+          <form @submit.prevent="submit">
+            <div class="card-header border-0 pt-6">
+              <div class="card-title">
+                  Create Holiday
+              </div>
+              <div class="card-toolbar">
+                  <div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base"> 
+                      <router-link to="/HolidaysList">
+                          <button type="button" class="btn btn-primary me-3">
+                            <span class="svg-icon svg-icon-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor"/>
+                            <path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor"/>
+                            </svg></span>
+                            Return back to List
+                          </button>
+                      </router-link> 
+                  </div> 
+              </div>   
+            </div>
+            <div class="card-body p-12">
+                <div class="fv-row mb-7 fv-plugins-icon-container">
+                    <label class="required fs-6 fw-bold mb-2">Code</label>
+                    <input type="text" class="form-control form-control-solid" placeholder="" name="name" v-model="form.code"> 
+                </div> 
+                <div class="fv-row mb-7 fv-plugins-icon-container">
+                    <label class="required fs-6 fw-bold mb-2">Name</label>
+                    <input type="text" class="form-control form-control-solid" placeholder="" name="name" v-model="form.name"> 
+                </div> 
+                <div class="row">
+                  <div class="fv-row mb-7 fv-plugins-icon-container">
+                    <label class="fs-6 fw-bold mb-2">Description</label>
+                    <textarea type="text" rows="2" class="form-control form-control-solid" placeholder="" name="name" v-model="form.description" /> 
+                </div> 
+                </div> 
+                <div class="fv-row mb-7 fv-plugins-icon-container">
+                    <label class="required fs-6 fw-bold mb-2">Date</label> 
+                    <Datepicker v-model="form.holiday_date" inputClassName="form-control form-control-solid" format="dd.MM.yyyy" autoApply :clearable="false" weekNumbers :monthChangeOnScroll="'inverse'"></Datepicker>  
+                </div> 
+                <div id="kt_modal_add_customer_billing_info" class="collapse show">
+                    <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
+                        <label class="fs-6 fw-bold mb-2">
+                            <span class="required">Country</span>
+                        </label>  
+                        <select class="form-control form-control-solid" v-model="form.countrySelection">
+                            <option v-for="item in countryList" :value="item" :key="item.code">
+                              {{ item.name }}<span v-if="item.code != null" >({{item.code}})</span>
+                            </option>
+                        </select>
+                    </div> 
+                    <div class="row g-9 mb-7" >
+                      <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
+                          <label class="required fs-6 fw-bold mb-2">Region</label> 
+                          <input class="form-control form-control-solid" v-if="form.countrySelection.code !='GB'" placeholder="" name="Region" v-model="form.region"> 
+                           <select class="form-control form-control-solid" v-if="form.countrySelection.code =='GB'" v-model="form.regionSelection">
+                            <option v-for="item in regionList" :value="item" :key="item.code">
+                              {{ item.name }}
+                            </option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-end">
+              <button type="submit" href="#" class="btn btn-success" id="kt_invoice_submit_button" @click="saveData()">
+                      <span class="svg-icon svg-icon-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M15.43 8.56949L10.744 15.1395C10.6422 15.282 10.5804 15.4492 10.5651 15.6236C10.5498 15.7981 10.5815 15.9734 10.657 16.1315L13.194 21.4425C13.2737 21.6097 13.3991 21.751 13.5557 21.8499C13.7123 21.9488 13.8938 22.0014 14.079 22.0015H14.117C14.3087 21.9941 14.4941 21.9307 14.6502 21.8191C14.8062 21.7075 14.9261 21.5526 14.995 21.3735L21.933 3.33649C22.0011 3.15918 22.0164 2.96594 21.977 2.78013C21.9376 2.59432 21.8452 2.4239 21.711 2.28949L15.43 8.56949Z" fill="currentColor"></path>
+                          <path opacity="0.3" d="M20.664 2.06648L2.62602 9.00148C2.44768 9.07085 2.29348 9.19082 2.1824 9.34663C2.07131 9.50244 2.00818 9.68731 2.00074 9.87853C1.99331 10.0697 2.04189 10.259 2.14054 10.4229C2.23919 10.5869 2.38359 10.7185 2.55601 10.8015L7.86601 13.3365C8.02383 13.4126 8.19925 13.4448 8.37382 13.4297C8.54839 13.4145 8.71565 13.3526 8.85801 13.2505L15.43 8.56548L21.711 2.28448C21.5762 2.15096 21.4055 2.05932 21.2198 2.02064C21.034 1.98196 20.8409 1.99788 20.664 2.06648Z" fill="currentColor"></path>
+                        </svg>
+                      </span>
+                      Save
+              </button>
+            </div>
+          </form>
+        </div>
+    </div> 
+  </div> 
+</template>
+<script>
+// Component Alias: `HOC001`
+import axios from 'axios' 
+import SecureLS from "secure-ls";  
+const ls = new SecureLS({ isCompression: false });
+import countries from '../../../assets/countries/countries.json';
+import regions from '../../../assets/regions/regions.json';
+import Swal from 'sweetalert2';
+axios.interceptors.response.use((response) => {
+  if (response.data.error) { 
+    new Swal({
+      icon: 'error',
+      title: 'Error...',
+      text: response.data.error
+    });
+  }
+  return response;
+}, (error) => {
+  return Promise.reject(error.message);
+});
+export default {
+  name: "HolidaysCreate",
+  data() {
+    return {
+      lists: [],
+      form: { 
+        code: null,
+        name: null,
+        description: null,
+        holiday_date: null,
+        region: null,
+        countrySelection: null,
+        regionSelection: null,
+        country_code: null
+      },
+      regionList: regions,
+      countryList: countries
+    };
+  },
+  methods: {
+    getData() {
+      this.lists = []; 
+      this.form.countrySelection = this.countryList[0];
+      this.form.regionSelection = this.regionList[0];
+    },
+    saveData(){
+      const params = this.form;
+      params.country_code = params.countrySelection.code;
+      if(params.countrySelection.code == 'GB'){
+        params.region = params.regionSelection.name;
+      }  
+      params.session_id = ls.get("user").session_id;
+      axios.post('/api/SystemParameters/CreateHolidays', params, {'Content-Type': 'application/json'})
+        .then((response) => { 
+            if(response.data != null && response.data.length == 36){  
+                ls.set("record_id", response.data);
+                this.$swal("Success", "Data saved succesfully..!");   
+                this.$router.push({ name: 'HolidaysUpdate' });
+            }
+        })
+        .catch(function (error) {
+            alert(error);
+            this.$swal("Failed", "Data could not be saved..Please refresh the page and try again..!");   
+        });  
+      }
+  },
+  created() {
+    this.getData();
+  }
+}; 
+</script>
